@@ -1,18 +1,17 @@
 import { WEIN } from "@/common";
 import React from "react";
 import WeinCart from "./WeinCart";
+import PopularSection from "@/PopularSection";
 
 const Wein = () => {
   return (
-    <section class="popular section" id="popular">
-      <span class="section__subtitle">Das beste GETRÄNKE</span>
-      <h2 class="section__title">WEIN</h2>
+    <PopularSection subTitle={"WEIN"}>
       <div class="popular__container container grid">
         {WEIN.map((item, idx) => (
           <WeinCart {...item} key={idx} />
         ))}
       </div>
-    </section>
+    </PopularSection>
   );
 };
 
